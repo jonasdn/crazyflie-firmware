@@ -89,7 +89,7 @@ typedef struct deck_driver {
   uint8_t pid;
   char *name;
 
-  /* Periphreal and Gpio used _dirrectly_ by the driver */
+  /* Peripheral and Gpio used _directly_ by the driver */
   uint32_t usedPeriph;
   uint32_t usedGpio;
 

@@ -3,7 +3,7 @@ extern crate bindgen;
 use std::env;
 use std::path::PathBuf;
 
-fn main() {
+fn generate_bindgen() {
     // Tell cargo to invalidate the built crate whenever the wrapper changes
     println!("cargo:rerun-if-changed=wrapper.h");
 
@@ -39,4 +39,8 @@ fn main() {
     bindings
         .write_to_file(out_path.join("deck_bindings.rs"))
         .expect("Couldn't write bindings!");
+}
+
+fn main() {
+    generate_bindgen();
 }

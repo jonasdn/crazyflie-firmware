@@ -4,6 +4,9 @@
 RUST_DECK_DRIVERS_PATH = $(CRAZYFLIE_BASE)/src/deck/drivers/rust
 
 ifeq ($(RUST_DECK_DRIVERS_ENABLED), 1)
+
+PROJ_OBJ += freertos_rs.o
+
 # This function generates a target for a deck driver written in
 # rust. It must be located at $(RUST_DECK_DRIVERS_PATH) and the name
 # of the directory must be the name of the Cargo project.
